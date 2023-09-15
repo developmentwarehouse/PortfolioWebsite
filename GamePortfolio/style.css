@@ -1,0 +1,36 @@
+@charset "UTF-8";
+body{
+    background-color:#6e6070;
+}
+a{
+    color: black;
+}
+.Page1{
+text-align: center;
+}
+.Page2{
+    text-align: center;
+}
+.Unity{
+    display: inline-block;
+    vertical-align: middle;
+}
+.Unity2{
+    display: inline-block;
+    vertical-align: middle;
+}
+.info1{
+    margin-left:15px;
+    display: inline-block;
+}
+.info2{
+    display: inline-block;
+    margin-left:10px;
+
+}
+.Copyrightstatement{
+    text-align: right;
+}
+.Copy{
+    text-align: right;
+}

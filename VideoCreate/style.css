@@ -1,0 +1,55 @@
+@charset "UTF-8";
+body{
+    background-color: #203a39;
+}
+.text1{
+    font-size: 30px;
+    text-align: center;
+    color: aquamarine;
+}
+.text2{
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+.Video1{
+    display: inline-block;
+    vertical-align: middle;
+}
+.Video2{
+    display: inline-block;
+    vertical-align: middle;
+}
+.Video3{
+    display: inline-block;
+    vertical-align: middle;
+}
+.Video4{
+    display: inline-block;
+    vertical-align: middle;
+}
+.info1{
+    color: white;
+    margin-left: 10px;
+    display: inline-block;
+}
+a{
+    color: white;
+}
+.info2{
+    margin-left: 10px;
+    color: white;
+    display: inline-block;
+}
+.info3{
+    display: inline-block;
+    color: white;
+}
+.info4{
+    color: white;
+    display: inline-block;
+}
+.Copy{
+    text-align: right;
+color: white;
+}
