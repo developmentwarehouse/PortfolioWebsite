@@ -10,7 +10,9 @@ table {
     margin-right: auto;
     border-collapse: collapse; /* セルの境界線を共有 */
 }
-
+.Text1{
+    text-align: center;
+}
 /* ▼各セルの装飾 */
 td {
     border: 1px solid black;  /* 表の罫線(=セルの枠線) */
