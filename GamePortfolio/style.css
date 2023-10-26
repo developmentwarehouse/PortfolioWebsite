@@ -11,22 +11,14 @@ text-align: center;
 .Page2{
     text-align: center;
 }
-.Unity{
-    display: inline-block;
-    vertical-align: middle;
+.cont{
+    align-items: center;
+    vertical-align: center;
+    display: flex;
 }
-.Unity2{
-    display: inline-block;
-    vertical-align: middle;
-}
-.info1{
+.info{
     margin-left:15px;
     display: inline-block;
-}
-.info2{
-    display: inline-block;
-    margin-left:10px;
-
 }
 .Copyrightstatement{
     text-align: right;
