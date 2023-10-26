@@ -2,6 +2,9 @@
 body{
     background-color:#6e6070;
 }
+.Wrapper{
+    margin: 5%;
+}
 a{
     color: black;
 }
@@ -12,6 +15,7 @@ text-align: center;
     text-align: center;
 }
 .cont{
+    margin: 100px;
     justify-content: center;
     align-items: center;
     vertical-align: center;
