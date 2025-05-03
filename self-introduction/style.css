@@ -1,9 +1,9 @@
 @charset "UTF-8";
 body {
-    background-color: green;
+    background-color:#c8e6c9;
 }
 .Text1{
-    color: black;
+    color:#2e2e2e;
 }
 table {
 
@@ -11,6 +11,7 @@ table {
 }
 /* ▼各セルの装飾 */
 td {
-    border: 1px solid black;  /* 表の罫線(=セルの枠線) */
+    border: 1px solid #ccc; /* 表の罫線(=セルの枠線) */
+    background-color: #fdfdfd;
     padding: 0.5em 1em;       /* セル内側の余白量 */
 }
