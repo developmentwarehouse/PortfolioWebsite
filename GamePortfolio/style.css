@@ -1,33 +1,217 @@
 @charset "UTF-8";
-body{
-    background-color:#6e6070;
+
+/* ============================================
+   基本設定
+============================================ */
+body {
+    background-color: #6e6070;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
-.Wrapper{
-    margin: 5%;
-}
-a{
+
+/* リンクスタイル */
+a {
     color: black;
+    text-decoration: none;
 }
-.Page1{
-text-align: center;
+
+a:hover {
+    text-decoration: underline;
 }
-.Page2{
+
+/* ============================================
+   レイアウト
+============================================ */
+.Wrapper {
+    margin: 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ============================================
+   ヘッダーセクション
+============================================ */
+.Page1 {
     text-align: center;
+    margin-bottom: 20px;
 }
-.cont{
-    margin: 100px;
-    justify-content: center;
-    align-items: center;
-    vertical-align: center;
+
+.Page1 h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #333;
+}
+
+.Page2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.Page2 h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #555;
+}
+
+/* ============================================
+   ゲームコンテンツセクション
+============================================ */
+.cont {
+    margin: 100px 0;
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
 }
-.info{
-    margin-left:15px;
+
+/* Unityゲーム埋め込み */
+.Unity {
+    flex-shrink: 0;
+}
+
+.Unity iframe {
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ゲーム情報 */
+.info {
+    flex: 1;
+    min-width: 300px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #6e6070;
+    padding-bottom: 10px;
+}
+
+.info h2 {
+    font-size: 1.3rem;
+    margin: 15px 0;
+    color: #444;
+}
+
+.info h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #666;
+    font-style: italic;
+}
+
+/* ============================================
+   ナビゲーション・フッター
+============================================ */
+.NextPage {
+    text-align: center;
+    margin: 60px 0 40px 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+}
+
+.NextPage a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #6e6070;
+    color: white;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.NextPage a:hover {
+    background-color: #5a525e;
+    text-decoration: none;
+}
+
+.Copy {
+    text-align: right;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #999;
+}
+
+.Copy h3 {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+.Copy p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 5px 0 0 0;
+}
+
+/* ============================================
+   レスポンシブ対応
+============================================ */
+@media (max-width: 768px) {
+    .cont {
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 0;
+    }
+
+    .Unity iframe {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+    }
+
+    .info {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .Page1 h2 {
+        font-size: 2rem;
+    }
+
+    .Page2 h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Wrapper {
+        margin: 2%;
+        padding: 10px;
+    }
+
+    .Unity iframe {
+        max-width: 350px;
+    }
+
+    .Page1 h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ============================================
+   著作権表記（コメントアウト用）
+============================================ */
+/*
+.Copyrightstatement {
+    text-align: right;
+    margin: 20px 0;
+}
+
+.Copyrightstatement a {
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 15px;
+    border-radius: 5px;
     display: inline-block;
 }
-.Copyrightstatement{
-    text-align: right;
-}
-.Copy{
-    text-align: right;
-}
+*/
