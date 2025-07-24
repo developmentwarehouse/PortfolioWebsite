@@ -1,68 +1,183 @@
 @charset "UTF-8";
 
-body {
-    background-color: #aa3c45;
+/* ===== 動画コンテナ（動画と説明をまとめる） ===== */
+.video-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    gap: 20px;
 }
 
+/* ===== 動画セクション ===== */
+.Video1,
+.Video2,
+.Video3,
+.Video4 {
+    flex-shrink: 0; /* サイズを固定 */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* HTMLのサイズを優先（560x315） */
+.Video1 iframe,
+.Video2 iframe,
+.Video3 iframe,
+.Video4 iframe {
+    width: 560px;
+    height: 315px;
+    border-radius: 8px;
+}
+
+/* ===== 動画情報セクション ===== */
+.info1,
+.info2,
+.info3,
+.info4 {
+    flex: 1; /* 残りの幅を使用 */
+    color: #2c3e50;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    line-height: 1.6;
+    min-width: 300px; /* 最小幅を確保 */
+}
+
+/* ===== ベーススタイル ===== */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    padding: 20px;
+    font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+    min-height: 100vh;
+}
+
+/* ===== ヘッダーテキスト ===== */
 .text1 {
     font-size: 30px;
     text-align: center;
-    color: #786c78;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .text2 {
     font-size: 20px;
     text-align: center;
-    color: white;
+    color: #34495e;
+    margin-bottom: 40px;
 }
 
-.Video1 {
-    display: inline-block;
-    vertical-align: middle;
+/* ===== 動画コンテナ（動画と説明をまとめる） ===== */
+.video-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    gap: 20px;
 }
 
-.Video2 {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.Video3 {
-    display: inline-block;
-    vertical-align: middle;
-}
-
+/* ===== 動画セクション ===== */
+.Video1,
+.Video2,
+.Video3,
 .Video4 {
-    display: inline-block;
-    vertical-align: middle;
+    flex-shrink: 0; /* サイズを固定 */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.info1 {
-    color: white;
-    margin-left: 10px;
-    display: inline-block;
+/* HTMLのサイズを優先（560x315） */
+.Video1 iframe,
+.Video2 iframe,
+.Video3 iframe,
+.Video4 iframe {
+    width: 560px;
+    height: 315px;
+    border-radius: 8px;
 }
 
-a {
-    color: white;
-}
-
-.info2 {
-    margin-left: 10px;
-    color: white;
-    display: inline-block;
-}
-
-.info3 {
-    display: inline-block;
-    color: white;
-}
-
+/* ===== 動画情報セクション ===== */
+.info1,
+.info2,
+.info3,
 .info4 {
-    color: white;
-    display: inline-block;
+    flex: 1; /* 残りの幅を使用 */
+    color: #2c3e50;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    line-height: 1.6;
+    min-width: 300px; /* 最小幅を確保 */
 }
 
+/* ===== リンクスタイル ===== */
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+    transform: translateY(-1px);
+}
+
+/* ===== フッター ===== */
 .Copy {
     text-align: right;
-    color: white;
+    color: #7f8c8d;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid rgba(52, 73, 94, 0.2);
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* ===== レスポンシブデザイン ===== */
+@media screen and (max-width: 1200px) {
+    .video-container {
+        flex-direction: column;
+    }
+
+    .Video1,
+    .Video2,
+    .Video3,
+    .Video4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .Video1 iframe,
+    .Video2 iframe,
+    .Video3 iframe,
+    .Video4 iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9; /* 16:9のアスペクト比を維持 */
+        border-radius: 8px;
+    }
+
+    .info1,
+    .info2,
+    .info3,
+    .info4 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .text1 {
+        font-size: 24px;
+    }
+
+    .text2 {
+        font-size: 18px;
+    }
 }
