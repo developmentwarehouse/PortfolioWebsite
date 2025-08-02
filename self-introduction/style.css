@@ -1,17 +1,154 @@
 @charset "UTF-8";
-body {
-    background-color:#c8e6c9;
-}
-.Text1{
-    color:#2e2e2e;
-}
-table {
 
-    border-collapse: collapse; /* セルの境界線を共有 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-/* ▼各セルの装飾 */
+
+body {
+    font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
+    line-height: 1.7;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.header h1 {
+    font-size: 2.2em;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    padding: 40px;
+}
+
+.intro-section {
+    margin-bottom: 50px;
+}
+
+.intro-text {
+    color: #333;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border-left: 4px solid #4facfe;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    color: #2c3e50;
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e74c3c;
+    display: flex;
+    align-items: center;
+}
+
+.section-title::before {
+    content: "📋";
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.qualification-title::before {
+    content: "🏆";
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.05em;
+}
+
 td {
-    border: 1px solid #ccc; /* 表の罫線(=セルの枠線) */
-    background-color: #fdfdfd;
-    padding: 0.5em 1em;       /* セル内側の余白量 */
+    border: none;
+    background-color: #fff;
+    padding: 15px;
+    transition: background-color 0.3s ease;
+}
+
+tr:nth-child(even) td {
+    background-color: #f8f9fa;
+}
+
+tr:hover td {
+    background-color: #e3f2fd;
+}
+
+td:first-child {
+    font-weight: 600;
+    color: #2c3e50;
+    white-space: nowrap;
+    width: 180px;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    color: #333;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    td:first-child {
+        width: auto;
+        white-space: normal;
+    }
 }
