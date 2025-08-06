@@ -1,217 +1,259 @@
 @charset "UTF-8";
-
-/* ============================================
-   基本設定
-============================================ */
-body {
-    background-color: #6e6070;
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
-/* リンクスタイル */
-a {
-    color: black;
-    text-decoration: none;
+body {
+    font-family: 'Segoe UI', 'Yu Gothic Medium', 'Hiragino Sans', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* ============================================
-   レイアウト
-============================================ */
 .Wrapper {
-    margin: 5%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    min-height: 100vh;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
 
-/* ============================================
-   ヘッダーセクション
-============================================ */
 .Page1 {
     text-align: center;
-    margin-bottom: 20px;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .Page1 h2 {
-    font-size: 2.5rem;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     margin: 0;
-    color: #333;
 }
 
 .Page2 {
     text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     margin-bottom: 40px;
+    border-radius: 10px;
+    border-left: 5px solid #667eea;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .Page2 h3 {
-    font-size: 1.5rem;
+    font-size: 1.3em;
+    color: #2c3e50;
     margin: 0;
-    color: #555;
 }
 
-/* ============================================
-   ゲームコンテンツセクション
-============================================ */
 .cont {
-    margin: 100px 0;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cont:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.Unity {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-/* Unityゲーム埋め込み */
-.Unity {
-    flex-shrink: 0;
 }
 
 .Unity iframe {
-    border: 2px solid #333;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 3px solid #667eea;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+    background: #f8f9fa;
 }
 
-/* ゲーム情報 */
 .info {
     flex: 1;
-    min-width: 300px;
-    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
 }
 
 .info h1 {
-    font-size: 1.8rem;
+    color: #2c3e50;
     margin-bottom: 15px;
-    color: #333;
-    border-bottom: 2px solid #6e6070;
+    font-size: 1.8em;
+    border-bottom: 2px solid #667eea;
     padding-bottom: 10px;
 }
 
 .info h2 {
-    font-size: 1.3rem;
-    margin: 15px 0;
-    color: #444;
+    color: #34495e;
+    margin-bottom: 12px;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.info h2:first-of-type {
+    color: #667eea;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 
 .info h3 {
-    font-size: 1.1rem;
-    margin: 10px 0;
-    color: #666;
-    font-style: italic;
+    color: #e74c3c;
+    font-size: 1em;
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(231, 76, 60, 0.1);
+    border-radius: 5px;
+    border-left: 3px solid #e74c3c;
 }
 
-/* ============================================
-   ナビゲーション・フッター
-============================================ */
 .NextPage {
     text-align: center;
-    margin: 60px 0 40px 0;
+    margin: 40px 0;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
 }
 
 .NextPage a {
     display: inline-block;
-    padding: 15px 30px;
-    background-color: #6e6070;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
+    text-decoration: none;
+    padding: 15px 30px;
     border-radius: 25px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
 }
 
 .NextPage a:hover {
-    background-color: #5a525e;
-    text-decoration: none;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+.NextPage h3 {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 600;
 }
 
 .Copy {
-    text-align: right;
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    border-radius: 10px;
     margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #999;
 }
 
 .Copy h3 {
-    font-size: 1rem;
-    color: #555;
     margin: 0;
+    font-size: 1.1em;
 }
 
 .Copy p {
-    font-size: 0.9rem;
-    color: #666;
     margin: 5px 0 0 0;
+    opacity: 0.8;
 }
 
-/* ============================================
-   レスポンシブ対応
-============================================ */
-@media (max-width: 768px) {
+/* レスポンシブデザイン */
+@media (max-width: 1200px) {
     .cont {
         flex-direction: column;
         align-items: center;
-        margin: 50px 0;
+    }
+
+    .Unity {
+        margin-bottom: 20px;
+    }
+
+    .Unity iframe {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .Wrapper {
+        padding: 10px;
+    }
+
+    .Page1 h2 {
+        font-size: 2em;
+    }
+
+    .Page2 {
+        padding: 20px;
+    }
+
+    .cont {
+        padding: 20px;
     }
 
     .Unity iframe {
         width: 100%;
-        max-width: 450px;
-        height: auto;
+        max-width: 400px;
+        height: 450px;
     }
 
     .info {
-        margin-top: 20px;
-        width: 100%;
+        padding: 15px;
     }
 
-    .Page1 h2 {
-        font-size: 2rem;
+    .info h1 {
+        font-size: 1.5em;
     }
 
-    .Page2 h3 {
-        font-size: 1.2rem;
+    .info h2 {
+        font-size: 1.1em;
     }
 }
 
 @media (max-width: 480px) {
-    .Wrapper {
-        margin: 2%;
-        padding: 10px;
-    }
-
     .Unity iframe {
         max-width: 350px;
+        height: 400px;
     }
 
     .Page1 h2 {
-        font-size: 1.5rem;
+        font-size: 1.8em;
+    }
+
+    .info h1 {
+        font-size: 1.3em;
+    }
+
+    .info h2 {
+        font-size: 1em;
     }
 }
 
-/* ============================================
-   著作権表記（コメントアウト用）
-============================================ */
-/*
-.Copyrightstatement {
-    text-align: right;
-    margin: 20px 0;
+/* ゲーム情報のスタイル向上 */
+.info > h2:nth-of-type(2) {
+    background: rgba(52, 152, 219, 0.1);
+    padding: 8px 12px;
+    border-radius: 5px;
+    border-left: 3px solid #3498db;
 }
 
-.Copyrightstatement a {
-    color: #333;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px 15px;
-    border-radius: 5px;
-    display: inline-block;
+/* 操作説明部分の強調 */
+.info h2:contains("操作方法") {
+    color: #27ae60 !important;
+    font-weight: 600;
 }
-*/

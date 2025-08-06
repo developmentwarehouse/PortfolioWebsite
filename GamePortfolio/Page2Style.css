@@ -1,258 +1,280 @@
-@charset "UTF-8";
-
-/* ============================================
-   基本設定
-============================================ */
-body {
-    background-color: #6e6070;
+@charset "utf-8";
+* {
     margin: 0;
-    padding: 20px;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Yu Gothic Medium', 'Hiragino Sans', Arial, sans-serif;
     line-height: 1.6;
-}
-
-/* リンクスタイル */
-a {
-    color: black;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
     color: #333;
-    text-decoration: underline;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
 }
 
-/* ============================================
-   ページヘッダー
-============================================ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    min-height: 100vh;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+}
+
 .Page1 {
     text-align: center;
-    margin: 30px 0 50px 0;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(231, 76, 60, 0.3);
 }
 
 .Page1 h3 {
-    font-size: 1.8rem;
+    font-size: 1.8em;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     margin: 0;
-    color: #333;
-    font-weight: bold;
+    line-height: 1.4;
 }
 
-/* ============================================
-   メインコンテンツ
-============================================ */
 .main {
-    text-align: center;
-    margin: 40px 0;
-    padding: 30px;
-    background-color: rgba(255, 255, 255, 0.95);
+    background: white;
+    padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .main h2 {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    color: #444;
-    border-bottom: 3px solid #6e6070;
-    padding-bottom: 15px;
-    display: inline-block;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.4em;
+    padding: 15px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 10px;
+    border-left: 5px solid #667eea;
 }
 
-/* iframeスタイリング */
 .main iframe {
-    border: 3px solid #333;
+    border: 4px solid #667eea;
     border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    background: #f8f9fa;
+    transition: transform 0.3s ease;
 }
 
 .main iframe:hover {
     transform: scale(1.02);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
-/* ============================================
-   情報セクション
-============================================ */
 .info {
-    text-align: center;
-    margin: 40px 0;
-    padding: 25px;
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 10px;
-    border-left: 5px solid #ff6b6b;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 2px solid #f39c12;
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.2);
 }
 
 .info h2 {
-    font-size: 1.3rem;
+    color: #d68910;
+    font-size: 1.2em;
+    text-align: center;
     margin: 0;
-    color: #d63031;
-    font-style: italic;
-    line-height: 1.5;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    border-left: 4px solid #f39c12;
 }
 
-/* ============================================
-   ナビゲーション
-============================================ */
+.info::before {
+    content: "⚠️";
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
 .ReturnPage {
     text-align: center;
-    margin: 60px 0 40px 0;
+    margin: 40px 0;
     padding: 20px;
 }
 
 .ReturnPage a {
     display: inline-block;
-    padding: 15px 35px;
-    background-color: #6e6070;
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
     color: white;
-    border-radius: 30px;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 25px;
     transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
 }
 
 .ReturnPage a:hover {
-    background-color: #5a525e;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    text-decoration: none;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(39, 174, 96, 0.6);
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
 }
 
 .ReturnPage h3 {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.1em;
+    font-weight: 600;
 }
 
-/* ============================================
-   フッター
-============================================ */
 .Copy {
-    text-align: right;
-    margin-top: 60px;
-    padding-top: 25px;
-    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    border-radius: 10px;
+    margin-top: 40px;
 }
 
 .Copy h3 {
-    font-size: 1rem;
-    color: #ddd;
     margin: 0;
-    font-weight: normal;
+    font-size: 1.1em;
 }
 
 .Copy p {
-    font-size: 0.9rem;
-    color: #bbb;
     margin: 5px 0 0 0;
-    font-style: italic;
+    opacity: 0.8;
 }
 
-/* ============================================
-   レスポンシブ対応
-============================================ */
-@media (max-width: 900px) {
-    .main iframe {
-        width: 90%;
-        max-width: 600px;
-        height: 600px;
-    }
-
-    .Page1 h3 {
-        font-size: 1.5rem;
-    }
-
-    .main h2 {
-        font-size: 1.3rem;
-    }
+/* 開発プロセス用の装飾 */
+.development-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
 }
 
-@media (max-width: 768px) {
-    body {
-        padding: 15px;
-    }
-
-    .main iframe {
-        width: 100%;
-        max-width: 500px;
-        height: 500px;
-    }
-
-    .Page1 h3 {
-        font-size: 1.3rem;
-    }
-
-    .main h2 {
-        font-size: 1.2rem;
-    }
-
-    .info h2 {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 480px) {
+/* レスポンシブデザイン */
+@media (max-width: 1000px) {
     body {
         padding: 10px;
     }
 
-    .main {
+    .container {
         padding: 20px;
     }
 
     .main iframe {
         width: 100%;
+        max-width: 600px;
+        height: 600px;
+    }
+
+    .Page1 h3 {
+        font-size: 1.5em;
+    }
+
+    .main h2 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .main iframe {
+        max-width: 500px;
+        height: 500px;
+    }
+
+    .Page1 h3 {
+        font-size: 1.3em;
+    }
+
+    .main h2 {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+
+    .info h2 {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 600px) {
+    .main iframe {
+        max-width: 400px;
+        height: 400px;
+    }
+
+    .Page1 {
+        padding: 30px 15px;
+    }
+
+    .Page1 h3 {
+        font-size: 1.2em;
+    }
+
+    .main {
+        padding: 25px;
+    }
+
+    .main h2 {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .info {
+        padding: 20px;
+    }
+
+    .info h2 {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 450px) {
+    .main iframe {
         max-width: 350px;
         height: 350px;
     }
 
-    .Page1 h3 {
-        font-size: 1.1rem;
-    }
-
-    .main h2 {
-        font-size: 1rem;
-    }
-
-    .info h2 {
-        font-size: 1rem;
-    }
-
-    .ReturnPage a {
-        padding: 12px 25px;
+    .container {
+        padding: 15px;
     }
 }
 
-/* ============================================
-   未使用のクラス（将来の拡張用）
-============================================ */
-/*
-.Wrapper {
-    margin: 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.Page2 {
-    text-align: center;
-}
-
-.cont {
-    margin: 100px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.Copyrightstatement {
-    text-align: right;
+/* 開発段階を示すプログレスバー風の装飾 */
+.progress-indicator {
+    background: #ecf0f1;
+    height: 6px;
+    border-radius: 3px;
     margin: 20px 0;
+    overflow: hidden;
 }
-*/
+
+.progress-bar {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    height: 100%;
+    width: 25%;
+    border-radius: 3px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
