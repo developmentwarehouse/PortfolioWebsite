@@ -1,183 +1,128 @@
 @charset "UTF-8";
-
-/* ===== 動画コンテナ（動画と説明をまとめる） ===== */
-.video-container {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 40px;
-    gap: 20px;
-}
-
-/* ===== 動画セクション ===== */
-.Video1,
-.Video2,
-.Video3,
-.Video4 {
-    flex-shrink: 0; /* サイズを固定 */
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 12px;
-    padding: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* HTMLのサイズを優先（560x315） */
-.Video1 iframe,
-.Video2 iframe,
-.Video3 iframe,
-.Video4 iframe {
-    width: 560px;
-    height: 315px;
-    border-radius: 8px;
-}
-
-/* ===== 動画情報セクション ===== */
-.info1,
-.info2,
-.info3,
-.info4 {
-    flex: 1; /* 残りの幅を使用 */
-    color: #2c3e50;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    line-height: 1.6;
-    min-width: 300px; /* 最小幅を確保 */
-}
-
-/* ===== ベーススタイル ===== */
 body {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Arial', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+    line-height: 1.6;
     margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
-    min-height: 100vh;
 }
-
-/* ===== ヘッダーテキスト ===== */
-.text1 {
-    font-size: 30px;
+.header {
     text-align: center;
-    color: #2c3e50;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
 }
-
-.text2 {
-    font-size: 20px;
-    text-align: center;
-    color: #34495e;
+.header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+.header p {
+    margin: 0;
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+.intro {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     margin-bottom: 40px;
 }
-
-/* ===== 動画コンテナ（動画と説明をまとめる） ===== */
+.intro h2 {
+    color: #667eea;
+    margin-bottom: 15px;
+}
 .video-container {
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 40px;
-    gap: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+    flex-wrap: wrap;
 }
-
-/* ===== 動画セクション ===== */
-.Video1,
-.Video2,
-.Video3,
-.Video4 {
-    flex-shrink: 0; /* サイズを固定 */
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 12px;
-    padding: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+.video-wrapper {
+    flex: 1;
+    min-width: 300px;
 }
-
-/* HTMLのサイズを優先（560x315） */
-.Video1 iframe,
-.Video2 iframe,
-.Video3 iframe,
-.Video4 iframe {
-    width: 560px;
+.video-wrapper iframe {
+    width: 100%;
     height: 315px;
-    border-radius: 8px;
 }
-
-/* ===== 動画情報セクション ===== */
-.info1,
-.info2,
-.info3,
-.info4 {
-    flex: 1; /* 残りの幅を使用 */
-    color: #2c3e50;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    line-height: 1.6;
-    min-width: 300px; /* 最小幅を確保 */
+.video-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
 }
-
-/* ===== リンクスタイル ===== */
-a {
-    color: #3498db;
+.video-info h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+.video-info h3 {
+    color: #667eea;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+.video-info p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+.video-info a {
+    display: inline-block;
+    background: #667eea;
+    color: white;
     text-decoration: none;
-    transition: all 0.3s ease;
-    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
-
-a:hover {
-    color: #2980b9;
-    text-decoration: underline;
-    transform: translateY(-1px);
+.video-info a:hover {
+    background: #5a6fd8;
 }
-
-/* ===== フッター ===== */
-.Copy {
-    text-align: right;
-    color: #7f8c8d;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 2px solid rgba(52, 73, 94, 0.2);
-    background: rgba(255, 255, 255, 0.6);
-    padding: 20px;
-    border-radius: 8px;
+.skills {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
 }
-
-/* ===== レスポンシブデザイン ===== */
-@media screen and (max-width: 1200px) {
+.skills h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+}
+.skill-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+.skill-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #667eea;
+}
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: #333;
+    color: white;
+    border-radius: 10px;
+}
+@media (max-width: 768px) {
     .video-container {
         flex-direction: column;
     }
-
-    .Video1,
-    .Video2,
-    .Video3,
-    .Video4 {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .Video1 iframe,
-    .Video2 iframe,
-    .Video3 iframe,
-    .Video4 iframe {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16/9; /* 16:9のアスペクト比を維持 */
-        border-radius: 8px;
-    }
-
-    .info1,
-    .info2,
-    .info3,
-    .info4 {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .text1 {
-        font-size: 24px;
-    }
-
-    .text2 {
-        font-size: 18px;
+    .header h1 {
+        font-size: 2em;
     }
 }
